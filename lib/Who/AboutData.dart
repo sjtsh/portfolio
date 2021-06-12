@@ -9,7 +9,7 @@ class AboutData extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 20.0, horizontal: 100),
+      padding: const EdgeInsets.symmetric(vertical: 20.0, horizontal: 90),
       child: Row(
         children: [
           Expanded(

@@ -3,7 +3,6 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 
 class ProjectImage extends StatelessWidget {
-
   final int index;
 
   ProjectImage(this.index);
@@ -33,11 +32,14 @@ class ProjectImage extends StatelessWidget {
           ),
           child: Container(
             margin: EdgeInsets.all(20),
-            width: MediaQuery.of(context).size.width*0.5,
-            height: MediaQuery.of(context).size.height*0.6,
+            width: MediaQuery.of(context).size.width * 0.8,
+            height: MediaQuery.of(context).size.height * 0.6,
             decoration: BoxDecoration(
-              color: Colors.blue,
               borderRadius: BorderRadius.circular(30),
+            ),
+            child: Image.asset(
+              "assets/appetit.png",
+              fit: BoxFit.contain,
             ),
           ),
         ),

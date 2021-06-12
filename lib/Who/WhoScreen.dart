@@ -1,10 +1,17 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:portfolio/Who/Fb.dart';
+import 'package:portfolio/Who/GitHub.dart';
+import 'package:portfolio/Who/Mail.dart';
 import 'package:portfolio/Who/MyImage.dart';
 
+// ignore: import_of_legacy_library_into_null_safe
+import 'package:flutter_icons/flutter_icons.dart';
+import 'package:portfolio/Who/Phone.dart';
+
 import 'About.dart';
-import 'Contacts.dart';
-import 'Field.dart';
+import 'Contact.dart';
+import 'Insta.dart';
 import 'Resume.dart';
 
 class WhoScreen extends StatelessWidget {
@@ -19,8 +26,10 @@ class WhoScreen extends StatelessWidget {
               height: constraints.maxHeight * 3 + 100,
               decoration: BoxDecoration(
                 image: DecorationImage(
-                    image: AssetImage("background/whoBackground.png"),
-                    fit: BoxFit.cover),
+                  image: AssetImage("background/whoBackground.png"),
+                  fit: BoxFit.cover,
+                  alignment: Alignment.topCenter,
+                ),
               ),
               child: Column(
                 children: [
@@ -63,48 +72,22 @@ class WhoScreen extends StatelessWidget {
                           "Feel free to say Hi",
                           style: TextStyle(
                             fontSize: 40,
-                            color: Colors.white,
+                            color: Color(0xffC6F0FF),
                           ),
                         ),
                         SizedBox(
                           height: 50,
                         ),
-                        Container(
-                          width: 700,
-                          child: Column(
-                            children: [
-                              Row(
-                                children: [
-                                  Expanded(child: Field("Name")),
-                                  Expanded(child: Field("Email")),
-                                ],
-                              ),
-                              Field("Subject"),
-                              SizedBox(
-                                  height: 250, child: Field("Description")),
-                            ],
-                          ),
-                        ),
+                        Contact(),
                         Expanded(child: Container()),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            Contacts(Center(
-                              child: Padding(
-                                  padding: EdgeInsets.only(right: 20, left: 25, bottom: 20, top: 25),
-                                  child: Image.asset(
-                                    "icons/github.png",
-                                    fit: BoxFit.contain,
-                                  )),
-                            )),
-                            Contacts(Icon(
-                              Icons.mail,
-                              size: 40,
-                            )),
-                            Contacts(Icon(
-                              Icons.call,
-                              size: 40,
-                            )),
+                            Fb(),
+                            GitHub(),
+                            Mail(),
+                            Phone(),
+                            Insta(),
                           ],
                         ),
                       ],

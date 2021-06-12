@@ -50,7 +50,7 @@ class _CertsScreenState extends State<CertsScreen> {
             SizedBox(
               height: 40,
             ),
-            Indicator(imgList, _current),
+            Indicator(imgList, _current, true),
           ],
         ),
       ),

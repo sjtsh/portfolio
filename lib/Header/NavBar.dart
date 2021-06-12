@@ -1,8 +1,10 @@
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import "package:hovering/hovering.dart";
 
 class NavBar extends StatefulWidget {
-
   final Function _setIndex;
+
   NavBar(this._setIndex);
 
   @override
@@ -10,19 +12,18 @@ class NavBar extends StatefulWidget {
 }
 
 class _NavBarState extends State<NavBar> {
-
   Color color = Color(0xffC6F0FF);
   Color color2 = Color(0xff56CCF2);
 
-  _setNav(int i){
+  _setNav(int i) {
     setState(() {
-      if(i==0){
+      if (i == 0) {
         color = Color(0xffC6F0FF);
         color2 = Color(0xff56CCF2);
-      }else if(i==1){
+      } else if (i == 1) {
         color = Color(0xffFFDCC8);
         color2 = Color(0xffDD5201);
-      }else if(i==2){
+      } else if (i == 2) {
         color = Color(0xffD3FFE6);
         color2 = Color(0xff219653);
       }
@@ -39,12 +40,11 @@ class _NavBarState extends State<NavBar> {
           _setNav(i);
         },
         indicator: UnderlineTabIndicator(
-          borderSide: BorderSide(
-            color: color2,
-            width: 4.0,
-          ),
-          insets: EdgeInsets.fromLTRB(30, 0, 30, 0)
-        ),
+            borderSide: BorderSide(
+              color: color2,
+              width: 4.0,
+            ),
+            insets: EdgeInsets.fromLTRB(30, 0, 30, 0)),
         indicatorWeight: 15,
         labelColor: color,
         unselectedLabelColor: Colors.white,
@@ -56,14 +56,83 @@ class _NavBarState extends State<NavBar> {
         ),
         tabs: [
           Tab(
-            text: "Who",
+            child: HoverWidget(
+              onHover: (PointerEnterEvent event) {
+                setState(() {});
+              },
+              hoverChild: Text(
+                "Who",
+                style: TextStyle(
+                  fontSize: 20,
+                  letterSpacing: 1.3,
+                  fontWeight: FontWeight.w100,
+                  fontFamily: "Roboto",
+                  color: Color(0xff56CCF2),
+                ),
+              ),
+              child: Text(
+                "Who",
+                style: TextStyle(
+                  fontSize: 20,
+                  letterSpacing: 1.3,
+                  fontWeight: FontWeight.w100,
+                  fontFamily: "Roboto",
+                ),
+              ),
+            ),
           ),
           Tab(
-            text: "Certs",
+            child: HoverWidget(
+              onHover: (PointerEnterEvent event) {
+                setState(() {});
+              },
+              hoverChild: Text(
+                "Certs",
+                style: TextStyle(
+                  fontSize: 20,
+                  letterSpacing: 1.3,
+                  fontWeight: FontWeight.w100,
+                  fontFamily: "Roboto",
+                  color: Color(0xffDD5201),
+                ),
+              ),
+              child: Text(
+                "Certs",
+                style: TextStyle(
+                  fontSize: 20,
+                  letterSpacing: 1.3,
+                  fontWeight: FontWeight.w100,
+                  fontFamily: "Roboto",
+                ),
+              ),
+            ),
           ),
           Tab(
-            text: "Projects",
-          )
+            child: HoverWidget(
+              onHover: (PointerEnterEvent event) {
+                setState(() {});
+              },
+              hoverChild: Text(
+                "Projects",
+                style: TextStyle(
+                  fontSize: 20,
+                  letterSpacing: 1.3,
+                  fontWeight: FontWeight.w100,
+                  fontFamily: "Roboto",
+                  color: Color(0xff219653),
+                ),
+              ),
+              child: Text(
+                "Projects",
+                style: TextStyle(
+                  fontSize: 20,
+                  letterSpacing: 1.3,
+                  fontWeight: FontWeight.w100,
+                  fontFamily: "Roboto",
+                ),
+              ),
+            ),
+          ),
         ],
       ),
     );

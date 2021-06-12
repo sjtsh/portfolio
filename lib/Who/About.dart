@@ -42,14 +42,14 @@ class About extends StatelessWidget {
                   "Sajat Shrestha",
                   style: TextStyle(
                     fontSize: 40,
-                    color: Colors.white,
+                    color: Color(0xffC6F0FF),
                   ),
                 ),
               ),
               SizedBox(
                 height: 40,
               ),
-              AboutData("Status", "Unemployed"),
+              AboutData("Studying at", "Herald College"),
               AboutData("Job Preference", "Flutter dev"),
               AboutData("Address", "Bkt, Nepal"),
               AboutData("Contact", "9818173521"),

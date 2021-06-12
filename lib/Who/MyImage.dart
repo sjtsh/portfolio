@@ -12,8 +12,8 @@ class MyImage extends StatelessWidget {
           sigmaY: 10,
         ),
         child: Container(
-          height: 600,
-          width: 400,
+          height: 650,
+          width: 450,
           decoration: BoxDecoration(
             gradient: LinearGradient(
               colors: [
@@ -29,9 +29,29 @@ class MyImage extends StatelessWidget {
             ),
           ),
           child: Container(
-          margin: EdgeInsets.all(20),
-            decoration: BoxDecoration(
-              color: Colors.red,
+            margin: EdgeInsets.symmetric(vertical: 20),
+            child: Column(
+              children: [
+                Expanded(
+                  child: Image.asset(
+                    "assets/me.jpeg",
+                    fit: BoxFit.contain,
+                  ),
+                ),
+                SizedBox(
+                  height: 30,
+                ),
+                Text(
+                  "Python • C • Java • Dart\nHTML • CSS • Flutter • XML\nMySQL • Firebase",
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 18,
+                    letterSpacing: 2,
+                    wordSpacing: 2,
+                  ),
+                ),
+              ],
             ),
           ),
         ),
