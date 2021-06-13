@@ -4,9 +4,6 @@ import 'package:portfolio/Who/Fb.dart';
 import 'package:portfolio/Who/GitHub.dart';
 import 'package:portfolio/Who/Mail.dart';
 import 'package:portfolio/Who/MyImage.dart';
-
-// ignore: import_of_legacy_library_into_null_safe
-import 'package:flutter_icons/flutter_icons.dart';
 import 'package:portfolio/Who/Phone.dart';
 
 import 'About.dart';

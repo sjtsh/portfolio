@@ -1,6 +1,5 @@
 import 'dart:ui';
 
-import 'package:clipboard/clipboard.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 // ignore: avoid_web_libraries_in_flutter

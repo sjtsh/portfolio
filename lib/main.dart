@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio/Header/NavBar.dart';
 import 'CertsScreen/CertsScreen.dart';
 import 'Header/Header.dart';
 import 'ProjectsScreen/ProjectsScreen.dart';

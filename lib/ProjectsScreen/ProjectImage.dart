@@ -2,6 +2,9 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 
+
+List projectImage = const["assets/appetit.png", "assets/wardrobe.png", "assets/wardrobe.png"];
+
 class ProjectImage extends StatelessWidget {
   final int index;
 
@@ -31,14 +34,14 @@ class ProjectImage extends StatelessWidget {
             ),
           ),
           child: Container(
-            margin: EdgeInsets.all(20),
+            margin: EdgeInsets.all(50),
             width: MediaQuery.of(context).size.width * 0.8,
             height: MediaQuery.of(context).size.height * 0.6,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(30),
             ),
             child: Image.asset(
-              "assets/appetit.png",
+              projectImage[index],
               fit: BoxFit.contain,
             ),
           ),
