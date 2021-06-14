@@ -6,8 +6,7 @@ import "package:hovering/hovering.dart";
 // ignore: avoid_web_libraries_in_flutter
 import 'dart:js' as js;
 
-// ignore: import_of_legacy_library_into_null_safe
-import 'package:flutter_icons/flutter_icons.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 
 class GitLink extends StatefulWidget {
@@ -54,7 +53,7 @@ class _GitLinkState extends State<GitLink> {
                 style: TextStyle(color: Colors.black, fontSize: 20),
               ),
               Icon(
-                FontAwesome.github,
+                FontAwesomeIcons.github,
                 color: Colors.black,
                 size: 50,
               ),
@@ -68,7 +67,7 @@ class _GitLinkState extends State<GitLink> {
                 style: TextStyle(color: Colors.white, fontSize: 20),
               ),
               Icon(
-                FontAwesome.github,
+                FontAwesomeIcons.github,
                 color: Colors.white,
                 size: 50,
               ),

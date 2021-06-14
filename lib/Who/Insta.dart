@@ -7,8 +7,7 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import "package:hovering/hovering.dart";
 
-// ignore: import_of_legacy_library_into_null_safe
-import 'package:flutter_icons/flutter_icons.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class Insta extends StatefulWidget {
 
@@ -51,12 +50,12 @@ class _InstaState extends State<Insta> {
                 setState(() {});
               },
               hoverChild: Icon(
-                FontAwesome.instagram,
+                FontAwesomeIcons.instagram,
                 size: 40,
                 color: Colors.white,
               ),
               child: Icon(
-                FontAwesome.instagram,
+                FontAwesomeIcons.instagram,
                 color: Colors.black,
                 size: 40,
               ),

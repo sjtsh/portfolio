@@ -7,8 +7,7 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import "package:hovering/hovering.dart";
 
-// ignore: import_of_legacy_library_into_null_safe
-import 'package:flutter_icons/flutter_icons.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:portfolio/Who/ContactLighting.dart';
 
 class GitHub extends StatefulWidget {
@@ -55,12 +54,12 @@ class _GitHubState extends State<GitHub> {
                       setState(() {});
                     },
                     hoverChild: Icon(
-                      FontAwesome.github,
+                      FontAwesomeIcons.github,
                       size: 40,
                       color: Colors.white,
                     ),
                     child: Icon(
-                      FontAwesome.github,
+                      FontAwesomeIcons.github,
                       color: Colors.black,
                       size: 40,
                     ),

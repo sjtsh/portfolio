@@ -33,8 +33,7 @@ dev_dependencies:
     sdk: flutter
   persistent_bottom_nav_bar: ^4.0.2
   flutter_swiper_null_safety:
-  flutter_swiper:
-  flutter_icons: ^1.1.0
+  font_awesome_flutter: ^9.0.0-nullsafety
   hovering: ^1.0.4
   flutter_email_sender: ^5.0.0
   clipboard: ^0.1.3

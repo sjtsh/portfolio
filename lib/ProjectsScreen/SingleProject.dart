@@ -14,40 +14,38 @@ class SingleProject extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Flexible(
-      child: Column(
-        children: [
-          Flexible(
-          flex: 9,
-            child: Stack(
-              children: [
-                Spheres1(index),
-                Spheres3(index),
-                Column(
-                  children: [
-                    Expanded(child: Container()),
-                    Expanded(child: Container()),
-                    ProjectImage(index),
-                    Indicator([1, 2, 3], index, false),
-                    Expanded(child: Container()),
-                  ],
-                ),
-                Spheres2(index),
-                Spheres4(index),
-              ],
-            ),
+    return Column(
+      children: [
+        Flexible(
+        flex: 9,
+          child: Stack(
+            children: [
+              Spheres1(index),
+              Spheres3(index),
+              Column(
+                children: [
+                  Expanded(child: Container()),
+                  Expanded(child: Container()),
+                  ProjectImage(index),
+                  Indicator([1, 2, 3], index, false),
+                  Expanded(child: Container()),
+                ],
+              ),
+              Spheres2(index),
+              Spheres4(index),
+            ],
           ),
-          Flexible(
-            flex: 10,
-            child: Column(
-              children: [
-                ProjectText(index),
-                Expanded(child: Container()),
-              ],
-            ),
+        ),
+        Flexible(
+          flex: 10,
+          child: Column(
+            children: [
+              ProjectText(index),
+              Expanded(child: Container()),
+            ],
           ),
-        ],
-      ),
+        ),
+      ],
     );
   }
 }

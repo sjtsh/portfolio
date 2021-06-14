@@ -76,20 +76,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "5.0.0"
-  flutter_icons:
-    dependency: "direct dev"
-    description:
-      name: flutter_icons
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "1.1.0"
-  flutter_page_indicator:
-    dependency: transitive
-    description:
-      name: flutter_page_indicator
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "0.0.3"
   flutter_svg:
     dependency: "direct dev"
     description:
@@ -97,13 +83,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.22.0"
-  flutter_swiper:
-    dependency: "direct dev"
-    description:
-      name: flutter_swiper
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "1.1.6"
   flutter_swiper_null_safety:
     dependency: "direct dev"
     description:
@@ -121,6 +100,13 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
+  font_awesome_flutter:
+    dependency: "direct dev"
+    description:
+      name: font_awesome_flutter
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "9.1.0"
   hovering:
     dependency: "direct dev"
     description:
@@ -238,13 +224,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.3.0"
-  transformer_page_view:
-    dependency: transitive
-    description:
-      name: transformer_page_view
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "0.1.6"
   typed_data:
     dependency: transitive
     description:

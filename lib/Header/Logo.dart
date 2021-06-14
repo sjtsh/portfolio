@@ -7,8 +7,8 @@ class Logo extends StatelessWidget {
     return Container(
       height: 70,
       width: 70,
-        child: SvgPicture.asset(
-        "icons/logo.svg",
+        child: Image.asset(
+        "icons/portfolio.png",
         fit: BoxFit.contain,
         color: Colors.white,
       ),
