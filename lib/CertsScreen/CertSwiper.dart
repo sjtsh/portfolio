@@ -21,7 +21,9 @@ class CertSwiper extends StatelessWidget {
               Stack(
                 alignment: Alignment.center,
                 children: [
-                  ClipRect(
+                  ClipRRect(
+                    borderRadius: MediaQuery.of(context).size.width > 800
+                        ? BorderRadius.circular(30):BorderRadius.circular(10),
                     child: BackdropFilter(
                       filter: ImageFilter.blur(
                         sigmaX: 10,
@@ -37,13 +39,14 @@ class CertSwiper extends StatelessWidget {
                             begin: Alignment.topLeft,
                             end: Alignment.bottomRight,
                           ),
-                          borderRadius: BorderRadius.circular(30),
                           border: Border.all(
                             color: Colors.white.withOpacity(0.08),
                           ),
                         ),
                         child: Padding(
-                          padding: const EdgeInsets.all(40.0),
+                          padding: MediaQuery.of(context).size.width > 800
+                              ? const EdgeInsets.all(40.0)
+                              : const EdgeInsets.all(10.0),
                           child: Image.asset(
                             imgList[index],
                             fit: BoxFit.contain,
@@ -52,15 +55,18 @@ class CertSwiper extends StatelessWidget {
                       ),
                     ),
                   ),
-
                 ],
               ),
             ],
           );
         },
         itemCount: imgList.length,
-        itemWidth: constraints.maxWidth,
-        itemHeight: constraints.maxHeight,
+        itemWidth: MediaQuery.of(context).size.width > 800
+            ? constraints.maxWidth
+            : 300,
+        itemHeight: MediaQuery.of(context).size.width > 800
+            ? constraints.maxHeight
+            : 200,
         layout: SwiperLayout.STACK,
         index: imgList.length,
         onIndexChanged: (int i) {

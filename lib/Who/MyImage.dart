@@ -3,59 +3,51 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 
 class MyImage extends StatelessWidget {
+
   @override
   Widget build(BuildContext context) {
-    return ClipRect(
-      child: BackdropFilter(
-        filter: ImageFilter.blur(
-          sigmaX: 10,
-          sigmaY: 10,
+
+    double width = MediaQuery.of(context).size.width;
+    return Stack(
+      alignment: Alignment.bottomCenter,
+      children: [
+        Container(
+          height: width>500 ? 600: 300,
+          width: width>500 ? 450: 225,
+          decoration: BoxDecoration(
+            image: DecorationImage(image: AssetImage("assets/me.jpeg",), fit: BoxFit.cover),
+            borderRadius: BorderRadius.circular(30),
+          ),
         ),
-        child: Container(
-          height: 650,
-          width: 450,
+        Container(
+          height: width>500 ? 600: 300,
+          width: width>500 ? 450: 225,
           decoration: BoxDecoration(
             gradient: LinearGradient(
               colors: [
-                Colors.white.withOpacity(0.2),
-                Colors.white.withOpacity(0.05),
+                Colors.transparent,
+                Colors.black,
               ],
-              begin: Alignment.topLeft,
-              end: Alignment.bottomRight,
+              begin: Alignment.center,
+              end: Alignment.bottomCenter,
             ),
-            borderRadius: BorderRadius.circular(20),
-            border: Border.all(
-              color: Colors.white.withOpacity(0.08),
-            ),
+            borderRadius: BorderRadius.circular(30),
           ),
-          child: Container(
-            margin: EdgeInsets.symmetric(vertical: 20),
-            child: Column(
-              children: [
-                Expanded(
-                  child: Image.asset(
-                    "assets/me.jpeg",
-                    fit: BoxFit.contain,
-                  ),
-                ),
-                SizedBox(
-                  height: 30,
-                ),
-                Text(
-                  "Python • C • Java • Dart\nHTML • CSS • Flutter • XML\nMySQL • Firebase",
-                  textAlign: TextAlign.center,
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 18,
-                    letterSpacing: 2,
-                    wordSpacing: 2,
-                  ),
-                ),
-              ],
+        ),
+        Positioned(
+          bottom: 10,
+          child: Text(
+            "Python • C • Java • Dart\nHTML • CSS • Flutter • XML\nMySQL • Firebase",
+            textAlign: TextAlign.center,
+            style: TextStyle(
+              color: Colors.white,
+              fontSize: width>500 ? 18: 12,
+              letterSpacing: 2,
+              wordSpacing: 2,
             ),
           ),
         ),
-      ),
+      ],
     );
   }
 }

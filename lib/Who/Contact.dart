@@ -24,7 +24,6 @@ class _ContactState extends State<Contact> {
 
   @override
   Widget build(BuildContext context) {
-
     return Container(
       width: 700,
       child: Form(
@@ -32,14 +31,18 @@ class _ContactState extends State<Contact> {
         child: Column(
           children: [
             Container(
-              margin: EdgeInsets.all(10),
-              height: 60,
+              margin: MediaQuery.of(context).size.width > 500
+                  ? EdgeInsets.all(10)
+                  : EdgeInsets.all(5),
+              height: MediaQuery.of(context).size.width > 500 ? 60 : 40,
               decoration: BoxDecoration(
                 color: Colors.black.withOpacity(0.4),
                 borderRadius: BorderRadius.circular(20),
               ),
               child: Padding(
-                padding: const EdgeInsets.only(right: 20, left: 20, top: 5),
+                padding: MediaQuery.of(context).size.width > 500
+                    ? const EdgeInsets.only(right: 20, left: 20, top: 5)
+                    : const EdgeInsets.only(right: 10, left: 10),
                 child: TextFormField(
                   controller: name,
                   textAlignVertical: TextAlignVertical.center,
@@ -47,7 +50,7 @@ class _ContactState extends State<Contact> {
                   cursorColor: Colors.white,
                   style: TextStyle(
                     color: Colors.white,
-                    fontSize: 18,
+                    fontSize: MediaQuery.of(context).size.width > 500 ? 18 : 10,
                   ),
                   validator: (value) {
                     if (value == null || value.isEmpty) {
@@ -60,21 +63,26 @@ class _ContactState extends State<Contact> {
                     hintText: "Name / Company",
                     hintStyle: TextStyle(
                       color: Colors.white.withOpacity(0.5),
-                      fontSize: 18,
+                      fontSize:
+                          MediaQuery.of(context).size.width > 500 ? 18 : 14,
                     ),
                   ),
                 ),
               ),
             ),
             Container(
-              margin: EdgeInsets.all(10),
-              height: 60,
+              margin: MediaQuery.of(context).size.width > 500
+                  ? EdgeInsets.all(10)
+                  : EdgeInsets.all(5),
+              height: MediaQuery.of(context).size.width > 500 ? 60 : 40,
               decoration: BoxDecoration(
                 color: Colors.black.withOpacity(0.4),
                 borderRadius: BorderRadius.circular(20),
               ),
               child: Padding(
-                padding: const EdgeInsets.only(right: 20, left: 20, top: 5),
+                padding: MediaQuery.of(context).size.width > 500
+                    ? const EdgeInsets.only(right: 20, left: 20, top: 5)
+                    : const EdgeInsets.only(right: 10, left: 10),
                 child: TextFormField(
                   controller: subject,
                   validator: (value) {
@@ -89,24 +97,27 @@ class _ContactState extends State<Contact> {
                   cursorColor: Colors.white,
                   style: TextStyle(
                     color: Colors.white,
-                    fontSize: 18,
+                    fontSize: MediaQuery.of(context).size.width > 500 ? 18 : 10,
                   ),
                   decoration: InputDecoration(
                     border: InputBorder.none,
                     hintText: "Subject",
                     hintStyle: TextStyle(
                       color: Colors.white.withOpacity(0.5),
-                      fontSize: 18,
+                      fontSize:
+                          MediaQuery.of(context).size.width > 500 ? 18 : 14,
                     ),
                   ),
                 ),
               ),
             ),
             SizedBox(
-              height: 250,
+              height: MediaQuery.of(context).size.width > 500 ? 250 : 150,
               child: Container(
-                margin: EdgeInsets.all(10),
-                height: 60,
+                margin: MediaQuery.of(context).size.width > 500
+                    ? EdgeInsets.all(10)
+                    : EdgeInsets.all(5),
+                height: MediaQuery.of(context).size.width > 500 ? 60 : 40,
                 decoration: BoxDecoration(
                   color: Colors.black.withOpacity(0.4),
                   borderRadius: BorderRadius.circular(20),
@@ -114,8 +125,9 @@ class _ContactState extends State<Contact> {
                 child: Stack(
                   children: [
                     Padding(
-                      padding: const EdgeInsets.only(
-                          right: 20, left: 20, top: 20, bottom: 20),
+                      padding: MediaQuery.of(context).size.width > 500
+                          ? const EdgeInsets.only(right: 20, left: 20, top: 5)
+                          : const EdgeInsets.only(right: 10, left: 10, top: 10),
                       child: TextFormField(
                         controller: description,
                         validator: (value) {
@@ -131,19 +143,27 @@ class _ContactState extends State<Contact> {
                         cursorColor: Colors.white,
                         style: TextStyle(
                           color: Colors.white,
-                          fontSize: 18,
+                          fontSize:
+                              MediaQuery.of(context).size.width > 500 ? 18 : 10,
                         ),
                         decoration: InputDecoration(
                           border: InputBorder.none,
                           hintText: "Description",
                           hintStyle: TextStyle(
                             color: Colors.white.withOpacity(0.5),
-                            fontSize: 18,
+                            fontSize: MediaQuery.of(context).size.width > 500
+                                ? 18
+                                : 14,
                           ),
                         ),
                       ),
                     ),
-                    Send(_formKey, name, subject, description,),
+                    Send(
+                      _formKey,
+                      name,
+                      subject,
+                      description,
+                    ),
                   ],
                 ),
               ),

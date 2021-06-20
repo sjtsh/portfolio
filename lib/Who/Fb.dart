@@ -31,9 +31,9 @@ class _FbState extends State<Fb> {
                 ['https://www.facebook.com/sajatshrestha/']);
           },
           child: Container(
-            margin: const EdgeInsets.only(left: 30.0, right: 30, bottom: 30),
-            height: 100,
-            width: 100,
+            margin:  MediaQuery.of(context).size.width>900 ? const EdgeInsets.only(left: 30.0, right: 30, bottom: 30): const EdgeInsets.only(left: 10, right: 10, bottom: 30),
+            height: MediaQuery.of(context).size.width>900 ? 100: 50,
+            width:  MediaQuery.of(context).size.width>900 ? 100: 50,
             decoration: BoxDecoration(
               gradient: RadialGradient(
                 colors: [
@@ -49,13 +49,13 @@ class _FbState extends State<Fb> {
               },
               hoverChild: Icon(
                 Icons.facebook_rounded,
-                size: 40,
+                size:  MediaQuery.of(context).size.width>900 ? 40:20,
                 color: Colors.white,
               ),
               child: Icon(
                 Icons.facebook_rounded,
                 color: Colors.black,
-                size: 40,
+                size: MediaQuery.of(context).size.width>900 ? 40: 20,
               ),
             ),
           ),

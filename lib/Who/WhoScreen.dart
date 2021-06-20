@@ -6,12 +6,18 @@ import 'package:portfolio/Who/Mail.dart';
 import 'package:portfolio/Who/MyImage.dart';
 import 'package:portfolio/Who/Phone.dart';
 
+import '../main.dart';
 import 'About.dart';
 import 'Contact.dart';
 import 'Insta.dart';
 import 'Resume.dart';
 
-class WhoScreen extends StatelessWidget {
+class WhoScreen extends StatefulWidget {
+  @override
+  _WhoScreenState createState() => _WhoScreenState();
+}
+
+class _WhoScreenState extends State<WhoScreen> {
   @override
   Widget build(BuildContext context) {
     return LayoutBuilder(builder: (context, constraints) {
@@ -23,7 +29,7 @@ class WhoScreen extends StatelessWidget {
               height: constraints.maxHeight * 3 + 100,
               decoration: BoxDecoration(
                 image: DecorationImage(
-                  image: AssetImage("background/whoBackground.png"),
+                  image: backgroundImage1,
                   fit: BoxFit.cover,
                   alignment: Alignment.topCenter,
                 ),
@@ -38,9 +44,10 @@ class WhoScreen extends StatelessWidget {
                       children: [
                         Text(
                           "Hi, I'm a Software Developer",
+                          textAlign: TextAlign.center,
                           style: TextStyle(
                             color: Colors.white,
-                            fontSize: 60,
+                            fontSize: MediaQuery.of(context).size.width>800? 60: 30,
                           ),
                         ),
                         Resume(),
@@ -49,7 +56,16 @@ class WhoScreen extends StatelessWidget {
                   ),
                   Container(
                     height: constraints.maxHeight,
-                    child: Row(
+                    child: MediaQuery.of(context).size.width>800? Row(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        Expanded(child: Container()),
+                        About(),
+                        Expanded(child: Container()),
+                        MyImage(),
+                        Expanded(child: Container()),
+                      ],
+                    ): Column(
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
                         Expanded(child: Container()),
@@ -68,7 +84,7 @@ class WhoScreen extends StatelessWidget {
                         Text(
                           "Feel free to say Hi",
                           style: TextStyle(
-                            fontSize: 40,
+                            fontSize: MediaQuery.of(context).size.width >500 ? 40: 25,
                             color: Color(0xffC6F0FF),
                           ),
                         ),
@@ -77,7 +93,7 @@ class WhoScreen extends StatelessWidget {
                         ),
                         Contact(),
                         Expanded(child: Container()),
-                        Row(
+                        MediaQuery.of(context).size.width>900 ? Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             Fb(),
@@ -85,6 +101,25 @@ class WhoScreen extends StatelessWidget {
                             Mail(),
                             Phone(),
                             Insta(),
+                          ],
+                        ):Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Fb(),
+                                GitHub(),
+                              ],
+                            ),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Mail(),
+                                Phone(),
+                                Insta(),
+                              ],
+                            ),
                           ],
                         ),
                       ],

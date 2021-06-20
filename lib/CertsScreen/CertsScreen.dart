@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../main.dart';
 import 'CertSwiper.dart';
 import 'Indicator.dart';
 
@@ -31,7 +32,7 @@ class _CertsScreenState extends State<CertsScreen> {
     return Container(
       decoration: BoxDecoration(
       image: DecorationImage(
-      image: AssetImage("background/certsBackground.png",),
+      image: backgroundImage2,
       fit: BoxFit.cover
       )
       ),

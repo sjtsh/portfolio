@@ -3,12 +3,12 @@ import 'package:flutter/material.dart';
 List list = const[
   [Color(0xff767676), Color(0xff343434)],
   [Color(0xffD2E4FF), Color(0xff0065FF)],
-  [Color(0xff767676), Color(0xff343434)],
+  [Color(0xffFFCDCD), Color(0xffFF0000)],
 ];
 List list2 = const[
   Colors.black,
   Color(0xff0065FF),
-  Colors.black,
+  Color(0xffFF0000),
 ];
 List projectLogos = const["icons/appetit.png", "icons/wardrobe.png", "icons/portfolio.png"];
 
@@ -20,7 +20,7 @@ class Spheres1 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Positioned(
+    return MediaQuery.of(context).size.width >800? Positioned(
       top: 30,
       right: 150,
       child: Container(
@@ -39,7 +39,7 @@ class Spheres1 extends StatelessWidget {
           ],
         ),
       ),
-    );
+    ): Container();
   }
 }
 
@@ -50,7 +50,7 @@ class Spheres2 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Positioned(
+    return MediaQuery.of(context).size.width >800? Positioned(
       top: 80,
       left: 800,
       child: Container(
@@ -63,7 +63,7 @@ class Spheres2 extends StatelessWidget {
           shape: BoxShape.circle,
         ),
       ),
-    );
+    ): Container();
   }
 }
 
@@ -74,7 +74,7 @@ class Spheres3 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Positioned(
+    return MediaQuery.of(context).size.width >800? Positioned(
       bottom: 50,
       right: 800,
       child: Container(
@@ -93,7 +93,7 @@ class Spheres3 extends StatelessWidget {
           ],
         ),
       ),
-    );
+    ): Container();
   }
 }
 
@@ -104,7 +104,7 @@ class Spheres4 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Positioned(
+    return MediaQuery.of(context).size.width >800? Positioned(
       bottom: 40,
       left: 100,
       child: Container(
@@ -123,6 +123,6 @@ class Spheres4 extends StatelessWidget {
           ],
         ),
       ),
-    );
+    ) : Container();
   }
 }

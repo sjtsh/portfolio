@@ -42,8 +42,8 @@ class _SendState extends State<Send> {
           }
         },
         child: Container(
-          height: 60,
-          width: 60,
+          height: MediaQuery.of(context).size.width > 500 ? 60: 40,
+          width: MediaQuery.of(context).size.width > 500 ? 60: 40,
           decoration: BoxDecoration(
             color: Color(0xff56CCF2),
             shape: BoxShape.circle,

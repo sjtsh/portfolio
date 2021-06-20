@@ -9,14 +9,15 @@ class AboutData extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 20.0, horizontal: 90),
+      padding: MediaQuery.of(context).size.width>500? const EdgeInsets.symmetric(vertical: 20.0, horizontal: 90):  const EdgeInsets.symmetric(vertical: 10.0, horizontal: 40),
       child: Row(
         children: [
           Expanded(
             child: Text(
               query + ": ",
+              textAlign: TextAlign.right,
               style: TextStyle(
-                fontSize: 20,
+                fontSize: MediaQuery.of(context).size.width>500? 20: 10,
                 color: Colors.white,
               ),
             ),
@@ -25,7 +26,7 @@ class AboutData extends StatelessWidget {
             child: Text(
               "  " + ans,
               style: TextStyle(
-                fontSize: 20,
+                fontSize: MediaQuery.of(context).size.width>500? 20: 10,
                 color: Colors.white.withOpacity(0.5),
               ),
             ),

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 
+import '../main.dart';
 import 'SingleProject.dart';
 
 class ProjectsScreen extends StatefulWidget {
@@ -16,10 +17,10 @@ class _ProjectsScreenState extends State<ProjectsScreen> {
     return SingleChildScrollView(
       child: Container(
         width: double.infinity,
-        height: MediaQuery.of(context).size.height * 1.8,
+        height: MediaQuery.of(context).size.width>800? MediaQuery.of(context).size.height * 1.8: MediaQuery.of(context).size.height*1.8,
         decoration: BoxDecoration(
             image: DecorationImage(
-          image: AssetImage("background/projectsBackground.png"),
+          image: backgroundImage3,
           fit: BoxFit.cover,
           alignment: Alignment.topCenter,
         )),

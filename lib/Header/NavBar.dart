@@ -48,12 +48,6 @@ class _NavBarState extends State<NavBar> {
         indicatorWeight: 15,
         labelColor: color,
         unselectedLabelColor: Colors.white,
-        labelStyle: TextStyle(
-          fontSize: 20,
-          letterSpacing: 1.3,
-          fontWeight: FontWeight.w100,
-          fontFamily: "Roboto",
-        ),
         tabs: [
           Tab(
             child: HoverWidget(
@@ -63,7 +57,7 @@ class _NavBarState extends State<NavBar> {
               hoverChild: Text(
                 "Who",
                 style: TextStyle(
-                  fontSize: 20,
+                  fontSize: MediaQuery.of(context).size.width>800? 20: 16,
                   letterSpacing: 1.3,
                   fontWeight: FontWeight.w100,
                   fontFamily: "Roboto",
@@ -73,7 +67,7 @@ class _NavBarState extends State<NavBar> {
               child: Text(
                 "Who",
                 style: TextStyle(
-                  fontSize: 20,
+                  fontSize: MediaQuery.of(context).size.width>800? 20: 16,
                   letterSpacing: 1.3,
                   fontWeight: FontWeight.w100,
                   fontFamily: "Roboto",
@@ -89,7 +83,7 @@ class _NavBarState extends State<NavBar> {
               hoverChild: Text(
                 "Certs",
                 style: TextStyle(
-                  fontSize: 20,
+                  fontSize: MediaQuery.of(context).size.width>800? 20: 16,
                   letterSpacing: 1.3,
                   fontWeight: FontWeight.w100,
                   fontFamily: "Roboto",
@@ -99,7 +93,7 @@ class _NavBarState extends State<NavBar> {
               child: Text(
                 "Certs",
                 style: TextStyle(
-                  fontSize: 20,
+                  fontSize: MediaQuery.of(context).size.width>800? 20: 16,
                   letterSpacing: 1.3,
                   fontWeight: FontWeight.w100,
                   fontFamily: "Roboto",
@@ -115,7 +109,7 @@ class _NavBarState extends State<NavBar> {
               hoverChild: Text(
                 "Projects",
                 style: TextStyle(
-                  fontSize: 20,
+                  fontSize: MediaQuery.of(context).size.width>800? 20: 16,
                   letterSpacing: 1.3,
                   fontWeight: FontWeight.w100,
                   fontFamily: "Roboto",
@@ -125,7 +119,7 @@ class _NavBarState extends State<NavBar> {
               child: Text(
                 "Projects",
                 style: TextStyle(
-                  fontSize: 20,
+                  fontSize: MediaQuery.of(context).size.width>800? 20: 16,
                   letterSpacing: 1.3,
                   fontWeight: FontWeight.w100,
                   fontFamily: "Roboto",

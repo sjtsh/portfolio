@@ -7,6 +7,8 @@ import 'AboutData.dart';
 class About extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+
+    double width = MediaQuery.of(context).size.width;
     return ClipRect(
       child: BackdropFilter(
         filter: ImageFilter.blur(
@@ -14,8 +16,8 @@ class About extends StatelessWidget {
           sigmaY: 10,
         ),
         child: Container(
-          height: 400,
-          width: 500,
+          height: width>500 ? 400: 200,
+          width: width>500 ? 500: 250,
           decoration: BoxDecoration(
             gradient: LinearGradient(
               colors: [
@@ -31,28 +33,28 @@ class About extends StatelessWidget {
             ),
           ),
           child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              SizedBox(
+              width>500 ? SizedBox(
                 height: 50,
-              ),
+              ): SizedBox(height:20),
               Container(
-                padding: const EdgeInsets.only(left: 100),
-                alignment: Alignment.centerLeft,
                 child: Text(
                   "Sajat Shrestha",
+                  textAlign: TextAlign.center,
                   style: TextStyle(
-                    fontSize: 40,
+                    fontSize: width>500 ? 40: 25,
                     color: Color(0xffC6F0FF),
                   ),
                 ),
               ),
-              SizedBox(
+              width>500 ? SizedBox(
                 height: 40,
-              ),
-              AboutData("Studying at", "Herald College"),
-              AboutData("Job Preference", "Flutter dev"),
-              AboutData("Address", "Bkt, Nepal"),
-              AboutData("Contact", "9818173521"),
+              ): Container(),
+              AboutData("Studying at     ", "Herald College"),
+              AboutData("Job Preference ", "Flutter dev"),
+              AboutData("Address           ", "Bkt, Nepal"),
+              AboutData("Contact           ", "9818173521"),
             ],
           ),
         ),
