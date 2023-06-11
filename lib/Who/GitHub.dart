@@ -31,8 +31,7 @@ class _GitHubState extends State<GitHub> {
               js.context.callMethod(
                   'open', ['https://github.com/sjtsh?tab=repositories']);
             },
-            child: Stack(
-            overflow: Overflow.clip,
+            child: Stack(clipBehavior: Clip.hardEdge,
             alignment: Alignment.center,
               children: [
                 Container(
